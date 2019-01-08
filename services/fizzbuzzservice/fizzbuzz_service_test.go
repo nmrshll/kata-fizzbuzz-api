@@ -1,4 +1,4 @@
-package services
+package fizzbuzzservice
 
 import "testing"
 

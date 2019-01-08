@@ -1,9 +1,16 @@
-package services
+package fizzbuzzservice
 
 import "fmt"
 
-type FizzBuzzService struct {
+type POSTFizzBuzzParameters struct {
+	limit int
+	int1  int
+	int2  int
+	str1  string
+	str2  string
 }
+
+type FizzBuzzService struct{}
 
 func (fbservice *FizzBuzzService) FizzBuzz(limit, int1, int2 int, str1, str2 string) string {
 	results := ""

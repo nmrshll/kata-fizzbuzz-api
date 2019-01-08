@@ -17,3 +17,6 @@ logs:
 	docker-compose logs -f --tail=100
 logs-api:
 	docker-compose logs -f --tail=100 api
+
+test:
+	go test ./...

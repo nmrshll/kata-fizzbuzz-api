@@ -3,11 +3,11 @@ package fizzbuzzservice
 import "fmt"
 
 type POSTFizzBuzzParameters struct {
-	limit int
-	int1  int
-	int2  int
-	str1  string
-	str2  string
+	Limit int    `json:"limit"`
+	Int1  int    `json:"int1"`
+	Int2  int    `json:"int2"`
+	Str1  string `json:"str1"`
+	Str2  string `json:"str2"`
 }
 
 type FizzBuzzService struct{}

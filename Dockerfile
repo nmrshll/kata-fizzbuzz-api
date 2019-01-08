@@ -8,11 +8,7 @@ COPY ./go.mod .
 COPY ./go.sum .
 RUN go mod download
 
-COPY ./api ./api
-COPY ./cmd ./cmd
-COPY ./config ./config
-COPY ./data ./data
-
+COPY . .
 RUN go install ./... 
 
 #
@@ -20,6 +16,4 @@ RUN go install ./...
 FROM alpine:3.7 AS run-base
 RUN apk add bash curl ca-certificates
 WORKDIR /usr/bin
-COPY ./data/datastore/migrations /migrations
-COPY --from=build-front /frontend/dist ./frontend/dist
 COPY --from=build /go/bin .
